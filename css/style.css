@@ -1,0 +1,116 @@
+/*=== Reset ===*/
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/*=== Variablen ===*/
+
+:root {
+    /* Abstände */
+    --space-xs: 0.25rem;
+    --space-s: 0.3rem;
+    --space-m: 0.5rem;
+    --space-l: 1rem;
+    --space-xl: 2rem;
+
+    /* Radius */
+    --radius: 0.5rem;
+}
+
+/*=== Basis-Layout & Seitenstil ===*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: var(--space-l);
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/*=== Header ===*/
+header {
+    background-color: #004e89;
+    color: white;
+    padding: var(--space-l);
+    text-align: center;
+    border-radius: var(--radius);
+}
+
+/*=== Hauptbereich ===*/
+main {
+    display: grid; /* flexible Anordnung */
+    gap: var(--space-xl); /* Abstand zwischen Grid-Elementen */
+    margin-top: var(--space-l);
+}
+
+/*=== Sektion ===*/
+section {
+    background: white; /* Weißer Hintergrund zum abheben der Sektion */
+    padding: var(--space-l);
+    border-radius: var(--radius);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); /* sanfter Schatten */
+}
+
+#kunden li {
+    list-style: decimal;
+    margin-left: var(--space-xl);
+}
+
+.auftragsliste li {
+    list-style: decimal;
+    margin-left: var(--space-xl);
+}
+
+.auftragsliste h2 {
+    margin-bottom: 0.5rem;
+}
+/*=== Formularelemente ===*/
+input,
+select,
+textarea {
+    width: 100%; /* Volle Breite */
+    padding: var(--space-m);
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-m);
+    border: 1px solid #ccc; /* Hellgraue Umrandung */
+    border-radius: var(--radius);
+}
+
+/*=== Button/Knopf ===*/
+button {
+    background-color: #007acc;
+    color: white;
+    padding: var(--space-m);
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Farbenwechsel beim Hover */
+}
+
+
+button:hover {
+    background-color: #005fa3; /* Dunklere Farbe beim Hovern */
+}
+
+#kundeHinzufuegen {
+    margin-bottom: var(--space-m);
+}
+
+/*=== Responsive Design (ab 768px) ===*/
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr); /* Zwei Spalten im Grid */
+    }
+
+    .auftragsliste {
+        grid-column: span 2; /* Über beide Spalten*/
+    }
+}

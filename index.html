@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Auftragserfassung</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Auftrags-App Demo</h1>
+    </header>
+
+    <main>
+
+        <!-- Kundenverwaltung -->
+        <section id="kundenVerwaltung">
+            <h2>Neue Kunden verwalten</h2>
+            <input type="text" id="neuerKunde" placeholder="Neuer Kunde">
+            <button id="kundeHinzufuegen">Hinzufügen</button>
+            <input type="text" id="kundensuche" placeholder="Kunden suche...">
+            <ul id="kunden"></ul>
+        </section>
+
+        <!-- Auftragserfassung -->
+        <section class="auftrag-formular">
+            <h2>Neuer Auftrag</h2>
+            <form id="auftragForm">
+                <label for="kunde">Kunde:</label>
+                <select id="kunde" required>
+                    <option value="">Bitte wählen</option>
+                </select>
+
+                <label for="produkt">Produkt:</label>
+                <input type="text" id="produkt" required>
+
+                <label for="menge">Menge:</label>
+                <input type="number" id="menge" required>
+
+                <label for="kommentar">Kommentar:</label>
+                <textarea id="kommentar"></textarea>
+
+                <button type="submit">Auftrag speichern</button>
+            </form>
+        </section>
+
+        <!-- Auftragsliste -->
+        <section class="auftragsliste">
+            <h2>Gespeicherte Aufträge</h2>
+            <ul id="auftraege"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
