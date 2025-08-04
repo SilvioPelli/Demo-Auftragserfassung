@@ -33,12 +33,6 @@ Ein einfaches Frontend-Projekt zum Erstellen, Bearbeiten und Verwalten von Kunde
 
 ---
 
-##  Screenshots
-
-*(Optional – kannst du z.B. mit `Windows + Shift + S` oder `cmd + shift + 4` machen und hier einfügen)*
-
----
-
 ## Installation & Nutzung
 
 1. Projekt herunterladen oder klonen:
