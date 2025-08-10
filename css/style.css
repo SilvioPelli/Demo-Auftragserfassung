@@ -72,6 +72,7 @@ section {
 .auftragsliste li {
     list-style: decimal;
     margin-left: var(--space-xl);
+    margin-bottom: var(--space-m);
 }
 
 .auftragsliste h2 {
